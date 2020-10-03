@@ -1,0 +1,21 @@
+
+<h1>CHILD DATA</h1>
+
+<table>
+  <thead>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>CONTACT NO</th>
+    <th>ADDRESS</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of data">
+      <td>{{i.name}}</td>
+      <td>{{i.age}}</td>
+      <td>{{i.contactno}}</td>
+      <td>{{i.address}}</td>
+      <button (click)=pass(i)>PASS TO CHILD</button>
+    </tr>
+
+  </tbody>
+</table>

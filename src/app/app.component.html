@@ -1,4 +1,37 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<table>
+  <thead>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>CONTACT NO</th>
+    <th>ADDRESS</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of custdata">
+      <td>{{i.name}}</td>
+      <td>{{i.age}}</td>
+      <td>{{i.contactno}}</td>
+      <td>{{i.address}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>PASSED FROM CHILD</h1>
+<table>
+  <thead>
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>CONTACT NO</th>
+    <th>ADDRESS</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of childdata">
+      <td>{{i.name}}</td>
+      <td>{{i.age}}</td>
+      <td>{{i.contactno}}</td>
+      <td>{{i.address}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-child [data]="getcustdata()" (passvalue)="getvalue($event)"></app-child>
+
